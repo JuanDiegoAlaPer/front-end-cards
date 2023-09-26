@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import './Menu.scss';
 import logo from '../../assets/images/logo.png';
 import avatar from '../../assets/images/avatar-1295394_960_720.webp';
@@ -15,7 +16,9 @@ function Menu() {
     <div className="container">
       <div className={`menu ${isMenuActive ? 'active' : ''}`}>
         <div className="logo-container">
-          <img className="logo" src={logo} alt="Logo UAM" />
+          <Link to="/logopage">
+            <img className="logo" src={logo} alt="Logo UAM" />
+          </Link>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
           <div className="menu-icon">&#9776;</div>
